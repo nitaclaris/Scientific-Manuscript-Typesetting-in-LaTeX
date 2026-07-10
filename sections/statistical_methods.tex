@@ -1,0 +1,52 @@
+\begin{frame}
+\frametitle{THE MODIFIED POISSON REGRESSION MODEL}
+\begin{itemize}
+	\item The outcome variable Y in this study is binary (1 is malnourished, 0 is    nourished). the mean is expected to be positive thus the log link function is then used to relate the expected value of the response variable with a linear combination of independent variables (Xi’s) as shown below: 	 
+	\[ log[\pi] = \alpha + \beta Xi\]
+	\item The relative risk (RR) is then given by the expectation of Beta. 
+	\item Since the Poisson errors tend to overestimate the confidence intervals, the Sandwich estimator is then used to estimate the variance of RR. 
+	\[ var(RR) = \frac {1}{a} -\frac {1}{n_{1}} + \frac {1}{c} -\frac{1}{n_{o}}\]
+	Beta is an unknown parameter which will be estimated using Maximum Likelihood Estimation method (MLE). 
+	 \item The tests carried out in this study will use a level of significance of 0.05. The p-value will be rejected if it is less than the level of significance
+\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{PREVALENCE VS ODDS RATIO}
+	\begin{itemize}
+		\item In most medical and epidemiological studies, Relative Risk is always the parameter of interest. It is estimated when the study focuses on measuring the association between exposure and outcome.
+		\item Usually, when the outcome variable is dichotomous, the appropriate statistical technique to use is Logistic regression which gives Odds Ratio (Zou, 2004). 
+		\item In Cross-sectional studies, Prevalence ratio and Prevalence Odds Ratio are used to measure the association between exposure and outcome. Risk Ratio is more appropriate in this type of study and can be computed from Prevalence ratio (McNutt et al., 2003). 
+		\item Odds ratio can be interpreted as risk ratio when the outcome of interest is rare or when the incidence is below 10\% (McNutt et al., 2003). 
+		\item Nevertheless, when the outcome of interest is common or when the prevalence is more than 10 percent (Cummings, 2009), interpreting Odds Ratio as Relative risk can highly overestimate the effect. 
+	\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{TEST FOR INDEPENDENCE OF INDIVIDUAL OBSERVATIONS}
+\begin{itemize}
+	\item This is a test for serial correlation among residuals. 
+	\item To test for independence between individual observations, that is the cases of malnutrition are assumed to be independent, Durbin Watson test will be used. 
+	\item The test statistic is given by: 
+	\[ DW =\frac{\sum _{t=2}^{T} (e_{t}-e_{t-1})}{\sum_{t=1}^{T}e_{t}^{2}} \]
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{TEST FOR LINEARITY}
+\begin{itemize}
+	\item Modified Poisson regression assumes that the model parameters are linear.
+	\item Linearity in model parameters seeks to investigate whether there is a relationship between them. 
+	\item To check for this, Pearson Correlation coefficient will be used.  It measures linear association between two or more variables. it is calculated as
+		\[ r=\frac{n (\sum xy -(\sum x)(\sum y))} {\sqrt { [n \sum x ^ 2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}\] 	
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{TEST FOR GOODNESS OF FIT}
+\begin{itemize}
+\item The test for the goodness of fit of the model will use the Chi-Square Goodness of Fit test.  It will show whether the model best fits the data.
+	 
+	H0: The data follows a Poisson distribution
+	
+	H1: The data does not follow a Poisson distribution
+	
+\item Decision: Reject the null hypothesis if the test statistic calculated is greater than the tabulated value. 
+\end{itemize}
+\end{frame}
